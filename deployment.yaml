@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-app #tells deployment to manage all pods that have java-app label
+  template:
+    metadata:
+      labels:
+        app: java-app #every pod created by the deployment has this lavel
+    spec:
+      containers:
+        - name: java-container
+          image: java-minikube
+          imagePullPolicy: Never
