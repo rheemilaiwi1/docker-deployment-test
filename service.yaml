@@ -1,4 +1,4 @@
-#point of this file -> service exposes your pods so other components can each them
+#point of this file -> service exposes your pods so other components can reach them
 apiVersion: apps/v1
 kind: Service
 metadata:
